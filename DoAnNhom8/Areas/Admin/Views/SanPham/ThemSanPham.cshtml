@@ -1,0 +1,107 @@
+﻿@model DoAnNhom8.Models.SANPHAM
+
+@{
+    ViewBag.Title = "Thêm sản phẩm";
+    Layout = "~/Areas/Admin/Views/Shared/Layout_Admin.cshtml";
+}
+
+<style>
+    /* CSS cho form và các thành phần */
+    .form-horizontal label {
+        width: 150px;
+        margin-bottom: 5px;
+    }
+
+    .form-horizontal .form-control {
+        width: calc(100% - 150px); /* Chỉnh kích thước input để căn đều */
+        margin-right: 5px; /* Khoảng cách giữa label và input */
+    }
+
+    .custom-file-input {
+        visibility: hidden;
+        width: 0;
+    }
+
+    .custom-file-label {
+        cursor: pointer;
+        padding: 8px 12px;
+        border-radius: 5px;
+        background-color: #3498db;
+        color: #fff;
+        width: 150px; /* Kích thước nút chọn ảnh */
+        display: inline-block;
+        text-align: center;
+        overflow: hidden; /* Ẩn nội dung vượt quá kích thước */
+        white-space: nowrap; /* Ngăn chặn xuống dòng */
+        text-overflow: ellipsis; /* Hiển thị dấu elipsis (...) nếu nội dung dài */
+    }
+</style>
+
+<h2>Thêm sản phẩm mới</h2>
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    <div class="form-horizontal">
+        <hr />
+        @Html.ValidationSummary(true)
+
+        <div class="mb-3">
+            @Html.Label("Tên sản phẩm", new { @class = "form-label" })
+            @Html.TextBox("TenSP", "", new { @class = "form-control" })
+        </div>
+
+        <div class="mb-3">
+            @Html.Label("Số lượng", new { @class = "form-label" })
+            @Html.TextBox("SoLuong", "", new { @class = "form-control" })
+        </div>
+
+        <div class="mb-3">
+            @Html.Label("Chi tiết", new { @class = "form-label" })
+            @Html.TextBox("ChiTiet", "", new { @class = "form-control" })
+        </div>
+
+        <div class="mb-3">
+            @Html.Label("Ảnh", new { @class = "form-label" })
+            <div class="custom-file">
+                <input type="file" class="custom-file-input" id="Anh" name="Anh" onchange="updateFileName(this)">
+                <label class="custom-file-label" for="Anh" id="customFileLabel">Chọn ảnh từ file</label>
+            </div>
+        </div>
+
+        <div class="mb-3">
+            @Html.Label("Giá bán", new { @class = "form-label" })
+            @Html.TextBox("GiaBan", "", new { @class = "form-control" })
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.MaNSX, "Mã Nhà Sản Xuất: ", new { @class = "control-label col-md-2" })
+            <div class="d-flex align-items-center mb-5">
+                @Html.DropDownListFor(model => model.MaNSX, ViewBag.hl as SelectList, "chọn mã nhà sản xuất")
+                @Html.ValidationMessageFor(model => model.MaNSX)
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Tạo mới" class="submit-btn" />
+            </div>
+        </div>
+    </div>
+}
+
+<div>
+    @Html.ActionLink("Trở lại", "List_SanPham", null, new { @class = "back-btn" })
+</div>
+
+<script src="~/Scripts/jquery-1.10.2.min.js"></script>
+<script src="~/Scripts/jquery.validate.min.js"></script>
+<script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
+
+<script>
+    // JavaScript để ẩn chữ "Browse" trên nút chọn ảnh
+    function updateFileName(input) {
+        var fileName = input.files[0].name;
+        document.getElementById('customFileLabel').innerText = fileName;
+    }
+</script>

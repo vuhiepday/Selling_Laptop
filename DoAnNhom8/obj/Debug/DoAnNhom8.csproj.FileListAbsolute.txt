@@ -1,0 +1,52 @@
+C:\Users\84359\Documents\Study\Năm 3\HK1\LTWEB\Other\DALTW\DALTW\DoAnNhom8\DoAnNhom8\bin\DoAnNhom8.dll.config
+C:\Users\84359\Documents\Study\Năm 3\HK1\LTWEB\Other\DALTW\DALTW\DoAnNhom8\DoAnNhom8\bin\DoAnNhom8.dll
+C:\Users\84359\Documents\Study\Năm 3\HK1\LTWEB\Other\DALTW\DALTW\DoAnNhom8\DoAnNhom8\bin\DoAnNhom8.pdb
+C:\Users\84359\Documents\Study\Năm 3\HK1\LTWEB\Other\DALTW\DALTW\DoAnNhom8\DoAnNhom8\bin\System.Web.Helpers.dll
+C:\Users\84359\Documents\Study\Năm 3\HK1\LTWEB\Other\DALTW\DALTW\DoAnNhom8\DoAnNhom8\bin\System.Web.Mvc.dll
+C:\Users\84359\Documents\Study\Năm 3\HK1\LTWEB\Other\DALTW\DALTW\DoAnNhom8\DoAnNhom8\bin\System.Web.Razor.dll
+C:\Users\84359\Documents\Study\Năm 3\HK1\LTWEB\Other\DALTW\DALTW\DoAnNhom8\DoAnNhom8\bin\System.Web.Webpages.Deployment.dll
+C:\Users\84359\Documents\Study\Năm 3\HK1\LTWEB\Other\DALTW\DALTW\DoAnNhom8\DoAnNhom8\bin\System.Web.Webpages.dll
+C:\Users\84359\Documents\Study\Năm 3\HK1\LTWEB\Other\DALTW\DALTW\DoAnNhom8\DoAnNhom8\bin\System.Web.Webpages.Razor.dll
+C:\Users\84359\Documents\Study\Năm 3\HK1\LTWEB\Other\DALTW\DALTW\DoAnNhom8\DoAnNhom8\bin\System.Web.Razor.xml
+C:\Users\84359\Documents\Study\Năm 3\HK1\LTWEB\Other\DALTW\DALTW\DoAnNhom8\DoAnNhom8\bin\System.Web.Webpages.xml
+C:\Users\84359\Documents\Study\Năm 3\HK1\LTWEB\Other\DALTW\DALTW\DoAnNhom8\DoAnNhom8\bin\System.Web.Webpages.Deployment.xml
+C:\Users\84359\Documents\Study\Năm 3\HK1\LTWEB\Other\DALTW\DALTW\DoAnNhom8\DoAnNhom8\bin\System.Web.Webpages.Razor.xml
+C:\Users\84359\Documents\Study\Năm 3\HK1\LTWEB\Other\DALTW\DALTW\DoAnNhom8\DoAnNhom8\bin\System.Web.Helpers.xml
+C:\Users\84359\Documents\Study\Năm 3\HK1\LTWEB\Other\DALTW\DALTW\DoAnNhom8\DoAnNhom8\bin\System.Web.Mvc.xml
+C:\Users\84359\Documents\Study\Năm 3\HK1\LTWEB\Other\DALTW\DALTW\DoAnNhom8\DoAnNhom8\obj\Debug\DoAnNhom8.csproj.AssemblyReference.cache
+C:\Users\84359\Documents\Study\Năm 3\HK1\LTWEB\Other\DALTW\DALTW\DoAnNhom8\DoAnNhom8\obj\Debug\DoAnNhom8.csproj.CoreCompileInputs.cache
+C:\Users\84359\Documents\Study\Năm 3\HK1\LTWEB\Other\DALTW\DALTW\DoAnNhom8\DoAnNhom8\obj\Debug\DoAnNhom8.csproj.CopyComplete
+C:\Users\84359\Documents\Study\Năm 3\HK1\LTWEB\Other\DALTW\DALTW\DoAnNhom8\DoAnNhom8\obj\Debug\DoAnNhom8.dll
+C:\Users\84359\Documents\Study\Năm 3\HK1\LTWEB\Other\DALTW\DALTW\DoAnNhom8\DoAnNhom8\obj\Debug\DoAnNhom8.pdb
+C:\Users\84359\Documents\Study\Năm 3\HK1\LTWEB\Other\DALTW\DALTW\DoAnNhom8\DoAnNhom8\bin\Microsoft.Web.Infrastructure.dll
+C:\NQC\HK1(Nam3)(2023-2024)\Lap Trinh Web\DALTW\DALTW\DALTW\DoAnNhom8\DoAnNhom8\bin\DoAnNhom8.dll.config
+C:\NQC\HK1(Nam3)(2023-2024)\Lap Trinh Web\DALTW\DALTW\DALTW\DoAnNhom8\DoAnNhom8\bin\DoAnNhom8.dll
+C:\NQC\HK1(Nam3)(2023-2024)\Lap Trinh Web\DALTW\DALTW\DALTW\DoAnNhom8\DoAnNhom8\bin\DoAnNhom8.pdb
+C:\NQC\HK1(Nam3)(2023-2024)\Lap Trinh Web\DALTW\DALTW\DALTW\DoAnNhom8\DoAnNhom8\bin\Microsoft.Web.Infrastructure.dll
+C:\NQC\HK1(Nam3)(2023-2024)\Lap Trinh Web\DALTW\DALTW\DALTW\DoAnNhom8\DoAnNhom8\bin\System.Web.Helpers.dll
+C:\NQC\HK1(Nam3)(2023-2024)\Lap Trinh Web\DALTW\DALTW\DALTW\DoAnNhom8\DoAnNhom8\bin\System.Web.Mvc.dll
+C:\NQC\HK1(Nam3)(2023-2024)\Lap Trinh Web\DALTW\DALTW\DALTW\DoAnNhom8\DoAnNhom8\bin\System.Web.Razor.dll
+C:\NQC\HK1(Nam3)(2023-2024)\Lap Trinh Web\DALTW\DALTW\DALTW\DoAnNhom8\DoAnNhom8\bin\System.Web.Webpages.Deployment.dll
+C:\NQC\HK1(Nam3)(2023-2024)\Lap Trinh Web\DALTW\DALTW\DALTW\DoAnNhom8\DoAnNhom8\bin\System.Web.Webpages.dll
+C:\NQC\HK1(Nam3)(2023-2024)\Lap Trinh Web\DALTW\DALTW\DALTW\DoAnNhom8\DoAnNhom8\bin\System.Web.Webpages.Razor.dll
+C:\NQC\HK1(Nam3)(2023-2024)\Lap Trinh Web\DALTW\DALTW\DALTW\DoAnNhom8\DoAnNhom8\bin\System.Web.Razor.xml
+C:\NQC\HK1(Nam3)(2023-2024)\Lap Trinh Web\DALTW\DALTW\DALTW\DoAnNhom8\DoAnNhom8\bin\System.Web.Webpages.xml
+C:\NQC\HK1(Nam3)(2023-2024)\Lap Trinh Web\DALTW\DALTW\DALTW\DoAnNhom8\DoAnNhom8\bin\System.Web.Webpages.Deployment.xml
+C:\NQC\HK1(Nam3)(2023-2024)\Lap Trinh Web\DALTW\DALTW\DALTW\DoAnNhom8\DoAnNhom8\bin\System.Web.Webpages.Razor.xml
+C:\NQC\HK1(Nam3)(2023-2024)\Lap Trinh Web\DALTW\DALTW\DALTW\DoAnNhom8\DoAnNhom8\bin\System.Web.Helpers.xml
+C:\NQC\HK1(Nam3)(2023-2024)\Lap Trinh Web\DALTW\DALTW\DALTW\DoAnNhom8\DoAnNhom8\bin\System.Web.Mvc.xml
+C:\NQC\HK1(Nam3)(2023-2024)\Lap Trinh Web\DALTW\DALTW\DALTW\DoAnNhom8\DoAnNhom8\obj\Debug\DoAnNhom8.csprojResolveAssemblyReference.cache
+C:\NQC\HK1(Nam3)(2023-2024)\Lap Trinh Web\DALTW\DALTW\DALTW\DoAnNhom8\DoAnNhom8\obj\Debug\DoAnNhom8.dll
+C:\NQC\HK1(Nam3)(2023-2024)\Lap Trinh Web\DALTW\DALTW\DALTW\DoAnNhom8\DoAnNhom8\obj\Debug\DoAnNhom8.pdb
+C:\NQC\HK1(Nam3)(2023-2024)\Lap Trinh Web\DALTW\DALTW\DALTW\DoAnNhom8\DoAnNhom8\bin\EntityFramework.dll
+C:\NQC\HK1(Nam3)(2023-2024)\Lap Trinh Web\DALTW\DALTW\DALTW\DoAnNhom8\DoAnNhom8\bin\EntityFramework.SqlServer.dll
+C:\NQC\HK1(Nam3)(2023-2024)\Lap Trinh Web\DALTW\DALTW\DALTW\DoAnNhom8\DoAnNhom8\bin\EntityFramework.xml
+C:\NQC\HK1(Nam3)(2023-2024)\Lap Trinh Web\DALTW\DALTW\DALTW\DoAnNhom8\DoAnNhom8\bin\EntityFramework.SqlServer.xml
+C:\NQC\HK1(Nam3)(2023-2024)\Lap Trinh Web\DALTW\DALTW\DALTW\DoAnNhom8\DoAnNhom8\bin\Newtonsoft.Json.dll
+C:\NQC\HK1(Nam3)(2023-2024)\Lap Trinh Web\DALTW\DALTW\DALTW\DoAnNhom8\DoAnNhom8\bin\System.Net.Http.Formatting.dll
+C:\NQC\HK1(Nam3)(2023-2024)\Lap Trinh Web\DALTW\DALTW\DALTW\DoAnNhom8\DoAnNhom8\bin\System.Web.Http.dll
+C:\NQC\HK1(Nam3)(2023-2024)\Lap Trinh Web\DALTW\DALTW\DALTW\DoAnNhom8\DoAnNhom8\bin\System.Web.Http.WebHost.dll
+C:\NQC\HK1(Nam3)(2023-2024)\Lap Trinh Web\DALTW\DALTW\DALTW\DoAnNhom8\DoAnNhom8\bin\Newtonsoft.Json.xml
+C:\NQC\HK1(Nam3)(2023-2024)\Lap Trinh Web\DALTW\DALTW\DALTW\DoAnNhom8\DoAnNhom8\bin\System.Net.Http.Formatting.xml
+C:\NQC\HK1(Nam3)(2023-2024)\Lap Trinh Web\DALTW\DALTW\DALTW\DoAnNhom8\DoAnNhom8\bin\System.Web.Http.xml
+C:\NQC\HK1(Nam3)(2023-2024)\Lap Trinh Web\DALTW\DALTW\DALTW\DoAnNhom8\DoAnNhom8\bin\System.Web.Http.WebHost.xml

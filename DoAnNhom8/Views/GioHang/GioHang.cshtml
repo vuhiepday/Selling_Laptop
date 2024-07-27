@@ -1,0 +1,79 @@
+﻿@{
+    ViewBag.Title = "GioHang";
+    Layout = "~/Views/Shared/UserLayout.cshtml";
+}
+@using DoAnNhom8.Models;
+@model List<GioHang>
+ 
+<style>
+    #cart-table td {
+        vertical-align: middle;
+    }
+
+    #checkout a{
+        color: white;
+    }
+
+    a {
+        color: #000;
+    }
+</style>
+
+<div class="card border-dark">
+    <table  id="cart-table" class="table mb-0">
+        <tr>
+            <th>Mã</th>
+            <th>Tên </th>
+            @*<th>ẢNH</th>*@
+            <th>Số lượng</th>
+            <th>Gía</th>
+            <th>Thành tiền</th>
+            <th>Thao tác</th>
+
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td >@item.sMaSP</td>
+                <td>
+                    <img width="50" height="50" style="object-fit: contain;" src="~/HinhAnhSP/SanPham/@item.sAnh"/>
+                    <span>@item.sTenSP</span>
+                </td>
+                @*<td width="221"><img src="@item.sAnh" alt="Ảnh" style="height: 100px;" /></td>*@
+                @using (Html.BeginForm("CapNhapGioHang", "GioHang", new { MaSP = item.sMaSP }))
+                {
+                    <td><input type="number" min="1" name="txtSoLuong" value="@item.iSoLuong" size="2"></td>
+                    <td>@string.Format("{0:0,0}", item.dGiaBan)</td>
+                    <td>@string.Format("{0:0,0}", item.dThanhTien)</td>
+                    <td><a href="@Url.Action("XemChiTiet","SanPham", new{@ms=item.sMaSP})">Details</a></td>
+                    <td>@Html.ActionLink("Delete", "XoaGioHang", new { @MaSP = item.sMaSP })</td>
+                    <td>
+                        <input type="submit" value="Update" class="btn btn-secondary text-white">
+                    </td>
+                }
+            </tr>
+        }
+
+        <tr>
+            <td style="color: #777; font-weight: bold;">Tổng số lượng:</td>
+            <td colspan="1" style="color: #777; font-weight: bold; text-align: right;">Tổng cộng:</td>
+            <td style="color: #777; font-weight: bold;">@string.Format("{0:0,0}", ViewBag.TongSoLuong)</td>
+            <td style="color: #777; font-weight: bold;">@string.Format("{0:0,0}", ViewBag.TongThanhTien)</td>
+        </tr>
+    </table>
+    
+</div>
+
+<div class="d-flex justify-content-end mt-3">
+    <button class="btn">@Html.ActionLink("XÓA GIỎ HÀNG", "XoaGioHang_ALL")</button>
+    @if(Session["MaKH"] != null) { 
+        <button id="checkout" class="btn btn-primary">
+            @Html.ActionLink("THANH TOÁN ", "ThanhToan")
+        </button>
+    } else { 
+        <button id="checkout" class="btn btn-primary">
+            @Html.ActionLink("THANH TOÁN ", "DangNhap", "KhachHang")
+        </button>
+    }
+</div>  

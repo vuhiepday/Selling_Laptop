@@ -1,0 +1,67 @@
+﻿@model List<DoAnNhom8.Models.GioHang>
+
+@{
+    ViewBag.Title = "Thanh Toán";
+    Layout = "~/Views/Shared/UserLayout.cshtml";
+}
+
+<h2>Thông Tin Giỏ Hàng</h2>
+
+<table class="table">
+    <!-- Hiển thị thông tin giỏ hàng -->
+    <tr>
+        <th>Mã Sản Phẩm</th>
+        <th>Tên Sản Phẩm</th>
+        <th>Số Lượng</th>
+        <th>Đơn Giá</th>
+        <th>Thành Tiền</th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.sMaSP</td>
+            <td>@item.sTenSP</td>
+            <td>@item.iSoLuong</td>
+            <td>@string.Format("{0:0,0}", item.dGiaBan)</td>
+            <td>@string.Format("{0:0,0}", item.dThanhTien)</td>
+        </tr>
+    }
+</table>
+
+<!-- Hiển thị tổng số lượng và tổng thành tiền -->
+<div class="ps-2">
+    <p>Tổng số lượng: @ViewBag.TongSoLuong</p>
+    <p>Tổng thành tiền: @string.Format("{0:0,0}", ViewBag.TongThanhTien)</p>
+</div>
+
+<!-- Form nhập thông tin thanh toán -->
+<div class="p-4 shadow rounded-3">
+    <h3 class="mb-5 text-dark">Thông Tin Thanh Toán</h3>
+    @using (Html.BeginForm("XuLyThanhToan", "GioHang", FormMethod.Post))
+    {
+        <div class="d-flex align-items-center mb-5">
+            <label style="width: 130px" for="txtHoTen">Họ Tên:</label>
+            <input class="form-control" type="text" name="txtHoTen" required />
+        </div>
+
+        <div class="d-flex align-items-center mb-5">
+            <label style="width: 130px" for="txtDiaChi">Địa Chỉ:</label>
+            <input class="form-control" type="text" name="txtDiaChi" required />
+        </div>
+
+        <div class="d-flex align-items-center mb-5">
+            <label style="width: 130px" for="txtEmail">Email:</label>
+            <input class="form-control" type="email" name="txtEmail" required />
+        </div>
+
+        <div class="d-flex align-items-center mb-5">
+            <label style="width: 130px" for="txtSoDienThoai">Số Điện Thoại:</label>
+            <input class="form-control" type="tel" name="txtSoDienThoai" required />
+        </div>
+
+        <div class="d-flex justify-content-end">
+            <input type="submit" value="Xác Nhận Thanh Toán" class="btn btn-primary" />
+        </div>
+    }
+</div>
+

@@ -1,0 +1,37 @@
+﻿@model IEnumerable<DoAnNhom8.Models.HOADON>
+
+@{
+    ViewBag.Title = "TimDonHang";
+    Layout = "~/Areas/Admin/Views/Shared/Layout_Admin.cshtml";
+}
+
+<h2>Tìm hóa đơn </h2>
+<table class="table">
+    <tr>
+        <th>
+           Mã Hóa Đơn
+        </th>
+        <th>
+           Mã Khách
+        </th>
+        <th>
+          Tổng tiền
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.MaHoaDon)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MaKhach)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TongTien)
+        </td>
+    </tr>
+}
+
+</table>

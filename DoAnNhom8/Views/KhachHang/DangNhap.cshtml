@@ -1,0 +1,41 @@
+﻿@{
+    ViewBag.Title = "DangNhap";
+    Layout = "~/Views/Shared/UserLayout.cshtml";
+}
+
+<div class="container" style="margin-top: 30px;">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <div class="card shadow-sm ">
+                <div class="card-header text-center">
+                    <h3>ĐĂNG NHẬP</h3>
+                </div>
+                <div class=" p-4">
+                    @using (Html.BeginForm())
+                    {
+                        <div class="form-group">
+                            <label for="TenDN">Tên Đăng Nhập:</label>
+                            @Html.TextBox("TenDN", "", new { @class = "form-control" })
+                            @if (!string.IsNullOrEmpty(ViewData["Loi1"] as string))
+                            {
+                                <span class="text-danger">@ViewData["Loi1"]</span>
+                            }
+                        </div>
+                        <div class="form-group">
+                            <label for="MatKhau">Mật Khẩu:</label>
+                            @Html.Password("MatKhau", "", new { @class = "form-control" })
+                            @if (!string.IsNullOrEmpty(ViewData["Loi2"] as string))
+                            {
+                                <span class="text-danger">@ViewData["Loi2"]</span>
+                            }
+                        </div>
+                        <button type="submit" style="background: #e60000;" class="btn text-white btn-block">Đăng Nhập</button>
+                        <div class="text-center" style="font-size: 20px; color: red; margin-top: 10px;">@ViewBag.ThongBaoDangNhap</div>
+                    }
+                    <div class="text-center" style="font-size: 20px; color: red; margin-top: 10px;">@ViewBag.ThongBaoDangNhap</div>
+                    <div class="text-center" style="font-size: 20px; color: red; margin-top: 10px;">@ViewBag.TB</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,177 @@
+﻿@model IEnumerable<DoAnNhom8.Models.SANPHAM>
+
+@{
+    ViewBag.Title = "SearchSanPham";
+    Layout = "~/Views/Shared/UserLayout.cshtml";
+}
+<style>
+    .product-container {
+        position: relative;
+        background-color: #fff;
+        border: 1px solid #ccc;
+        border-radius: 10px;
+        padding: 10px;
+        margin: 10px;
+        width: calc(33.33% - 20px);
+        display: inline-block;
+        text-align: center;
+        overflow: hidden; /* Ẩn phần ngoài của ảnh nền */
+    }
+
+    .background-image {
+        width: 100%; /* Đảm bảo ảnh nền kích thước rộng 100% */
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1; /* Đặt vị trí z thấp hơn để nó nằm phía sau ảnh chính */
+    }
+
+    .product-image {
+        width: 100%;
+    }
+
+    .product-title {
+        font-weight: bold;
+        margin-top: 10px;
+        font-size: 18px;
+    }
+
+    .buy-button {
+        background-color: red;
+        border: none;
+        border-radius: 20px; /* Điều này sẽ làm cho góc tròn hơn */
+        color: white;
+        padding: 10px 20px;
+        transition: background-color 0.3s; /* Hiệu ứng màu nền */
+    }
+
+        .buy-button:hover {
+            background-color: darkred; /* Màu nền thay đổi khi hover */
+        }
+
+    .view-details {
+        margin-top: 10px;
+    }
+
+    .image-container {
+        position: relative;
+    }
+
+    .product-image {
+        width: 100%;
+        z-index: 1; /* Đặt z-index của ảnh sản phẩm lên cao hơn */
+    }
+
+    .background-image {
+        width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 2; /* Đặt z-index của ảnh nền cao hơn ảnh sản phẩm */
+    }
+
+    .hover-effect {
+        transition: transform 0.2s;
+        border-radius: 10px;
+    }
+
+        .hover-effect:hover {
+            transform: scale(1.1);
+        }
+
+    .star-list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+    }
+
+        .star-list li {
+            padding-left: 0;
+            margin-right: 20px;
+            margin-left: 0;
+        }
+
+        .star-list .fa-star {
+            display: block;
+        }
+
+    .heart-icon {
+        padding: 2px;
+        font-size: 22px;
+        float: left;
+        border-radius: 50%;
+        color: red;
+    }
+</style>
+
+<h2>Danh Sách Sản Phẩm</h2>
+<div class="row">
+    @foreach (var item in Model)
+    {
+        <div class="product-container hover-effect">
+            <a href="@Url.Action("XemChiTiet", "SanPham", new { MaSP = item.MaSP })" class="view-details" style="text-decoration: none; color: inherit;">
+
+                <!-- Add the hover-effect class here -->
+                <div class="image-container">
+                    <img src="../Assets/images/borderSP.PNG" alt="" class="background-image" />
+                    <img src="~/HinhAnhSP/SanPham/@item.Anh" class="product-image" />
+                </div>
+
+                <p class="product-title">
+                    @if (item.TenSP.Length <= 30)
+                    {
+                        <b style="text-align: left; font-size: 28px">@item.TenSP</b>
+                    }
+                    else
+                    {
+                        <b style="text-align: left; font-size: 28px">@item.TenSP.Substring(0, 30)...</b>
+                    }
+                </p>
+                <ul class="star-list fs-2">
+                    <li><span class="fa fa-star text-warning"></span></li>
+                    <li><span class="fa fa-star text-warning"></span></li>
+                    <li><span class="fa fa-star text-warning"></span></li>
+                    <li><span class="fa fa-star text-warning"></span></li>
+                    <li><span class="fa fa-star text-warning"></span></li>
+                </ul><br />
+                <p style="text-align: left; font-size: 20px">
+                    Giá: <b style="color: red">@item.GiaBan$  &nbsp;</b>
+                    <del style="color: gray">&nbsp;@((item.GiaBan + 100) + "$")</del>
+                </p>
+
+            </a>
+            <div class="d-flex align-items-center justify-content-between mt-5">
+                <i class="fa fa-heart heart-icon" id="heart-icon"></i>
+                <button type="submit" class="btn btn-primary buy-button">MUA NGAY</button>
+                <i class="bx bxs-plus-circle text-danger" style="font-size: 30px; float: right;"></i>
+            </div>
+
+
+        </div>
+
+    }
+</div>
+<script>
+    var heartIcons = document.querySelectorAll('.heart-icon');
+
+    for (var i = 0; i < heartIcons.length; i++) {
+        var isHeartFilled = true; // Initially filled
+
+        heartIcons[i].addEventListener('click', function () {
+            isHeartFilled = !isHeartFilled;
+            var currentIcon = this;
+
+            if (isHeartFilled) {
+                //currentIcon.style.border = 'none';
+                //currentIcon.style.padding = '0';
+                currentIcon.style.color = 'red';
+            } else {
+                currentIcon.style.border = '2px solid red';
+                currentIcon.style.border = '2px solid red';
+                currentIcon.style.padding = '2px';
+                currentIcon.style.color = 'red';
+            }
+        });
+    }
+</script>

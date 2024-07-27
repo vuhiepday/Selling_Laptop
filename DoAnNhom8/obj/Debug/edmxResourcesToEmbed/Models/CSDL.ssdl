@@ -1,0 +1,190 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="QL_CUAHANGModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="CHITIETHOADON">
+    <Key>
+      <PropertyRef Name="MaHoaDon" />
+      <PropertyRef Name="MaSP" />
+    </Key>
+    <Property Name="MaHoaDon" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="MaSP" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="SoLuong" Type="int" />
+    <Property Name="DonGia" Type="decimal" Precision="10" Scale="2" />
+    <Property Name="ThanhTien" Type="decimal" Precision="10" Scale="2" />
+  </EntityType>
+  <EntityType Name="HOADON">
+    <Key>
+      <PropertyRef Name="MaHoaDon" />
+    </Key>
+    <Property Name="MaHoaDon" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="MaNV" Type="varchar" MaxLength="50" />
+    <Property Name="MaKhach" Type="varchar" MaxLength="50" />
+    <Property Name="TongTien" Type="decimal" Precision="10" Scale="2" />
+  </EntityType>
+  <EntityType Name="KHACH">
+    <Key>
+      <PropertyRef Name="MaKhach" />
+    </Key>
+    <Property Name="MaKhach" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="TenKhach" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="TENDN" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="MATKHAU" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="SDT" Type="varchar" MaxLength="15" />
+    <Property Name="NGAYSINH" Type="date" />
+    <Property Name="EMAIL" Type="varchar" MaxLength="50" />
+    <Property Name="DIACHI" Type="varchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="NSX">
+    <Key>
+      <PropertyRef Name="MaNSX" />
+    </Key>
+    <Property Name="MaNSX" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="TenNSX" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="NHANVIEN">
+    <Key>
+      <PropertyRef Name="MaNV" />
+    </Key>
+    <Property Name="MaNV" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="TenNV" Type="varchar" MaxLength="50" />
+    <Property Name="GioiTinh" Type="varchar" MaxLength="10" />
+    <Property Name="DiaChi" Type="varchar" MaxLength="100" />
+    <Property Name="SDT" Type="varchar" MaxLength="15" />
+  </EntityType>
+  <EntityType Name="SANPHAM">
+    <Key>
+      <PropertyRef Name="MaSP" />
+    </Key>
+    <Property Name="MaSP" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="TenSP" Type="varchar" MaxLength="50" />
+    <Property Name="SoLuong" Type="int" />
+    <Property Name="ChiTiet" Type="text" />
+    <Property Name="Anh" Type="varchar" MaxLength="50" />
+    <Property Name="GiaBan" Type="decimal" Precision="10" Scale="2" />
+    <Property Name="MaNSX" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="principal_id" Type="int" Nullable="false" />
+    <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="version" Type="int" />
+    <Property Name="definition" Type="varbinary(max)" />
+  </EntityType>
+  <EntityType Name="TK_ADMIN">
+    <Key>
+      <PropertyRef Name="MaNV" />
+      <PropertyRef Name="TAIKHOAN" />
+    </Key>
+    <Property Name="MaNV" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="TAIKHOAN" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="MATKHAU" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <Association Name="FK__CHITIETHO__MaHoa__5629CD9C">
+    <End Role="HOADON" Type="Self.HOADON" Multiplicity="1" />
+    <End Role="CHITIETHOADON" Type="Self.CHITIETHOADON" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="HOADON">
+        <PropertyRef Name="MaHoaDon" />
+      </Principal>
+      <Dependent Role="CHITIETHOADON">
+        <PropertyRef Name="MaHoaDon" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__CHITIETHOA__MaSP__571DF1D5">
+    <End Role="SANPHAM" Type="Self.SANPHAM" Multiplicity="1" />
+    <End Role="CHITIETHOADON" Type="Self.CHITIETHOADON" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SANPHAM">
+        <PropertyRef Name="MaSP" />
+      </Principal>
+      <Dependent Role="CHITIETHOADON">
+        <PropertyRef Name="MaSP" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__HOADON__MaKhach__534D60F1">
+    <End Role="KHACH" Type="Self.KHACH" Multiplicity="0..1" />
+    <End Role="HOADON" Type="Self.HOADON" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="KHACH">
+        <PropertyRef Name="MaKhach" />
+      </Principal>
+      <Dependent Role="HOADON">
+        <PropertyRef Name="MaKhach" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__HOADON__MaNV__52593CB8">
+    <End Role="NHANVIEN" Type="Self.NHANVIEN" Multiplicity="0..1" />
+    <End Role="HOADON" Type="Self.HOADON" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="NHANVIEN">
+        <PropertyRef Name="MaNV" />
+      </Principal>
+      <Dependent Role="HOADON">
+        <PropertyRef Name="MaNV" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__SANPHAM__MaNSX__4BAC3F29">
+    <End Role="NSX" Type="Self.NSX" Multiplicity="0..1" />
+    <End Role="SANPHAM" Type="Self.SANPHAM" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="NSX">
+        <PropertyRef Name="MaNSX" />
+      </Principal>
+      <Dependent Role="SANPHAM">
+        <PropertyRef Name="MaNSX" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__TK_ADMIN__MaNV__59FA5E80">
+    <End Role="NHANVIEN" Type="Self.NHANVIEN" Multiplicity="1" />
+    <End Role="TK_ADMIN" Type="Self.TK_ADMIN" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="NHANVIEN">
+        <PropertyRef Name="MaNV" />
+      </Principal>
+      <Dependent Role="TK_ADMIN">
+        <PropertyRef Name="MaNV" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="QL_CUAHANGModelStoreContainer">
+    <EntitySet Name="CHITIETHOADON" EntityType="Self.CHITIETHOADON" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="HOADON" EntityType="Self.HOADON" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="KHACH" EntityType="Self.KHACH" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="NSX" EntityType="Self.NSX" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="NHANVIEN" EntityType="Self.NHANVIEN" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SANPHAM" EntityType="Self.SANPHAM" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TK_ADMIN" EntityType="Self.TK_ADMIN" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK__CHITIETHO__MaHoa__5629CD9C" Association="Self.FK__CHITIETHO__MaHoa__5629CD9C">
+      <End Role="HOADON" EntitySet="HOADON" />
+      <End Role="CHITIETHOADON" EntitySet="CHITIETHOADON" />
+    </AssociationSet>
+    <AssociationSet Name="FK__CHITIETHOA__MaSP__571DF1D5" Association="Self.FK__CHITIETHOA__MaSP__571DF1D5">
+      <End Role="SANPHAM" EntitySet="SANPHAM" />
+      <End Role="CHITIETHOADON" EntitySet="CHITIETHOADON" />
+    </AssociationSet>
+    <AssociationSet Name="FK__HOADON__MaKhach__534D60F1" Association="Self.FK__HOADON__MaKhach__534D60F1">
+      <End Role="KHACH" EntitySet="KHACH" />
+      <End Role="HOADON" EntitySet="HOADON" />
+    </AssociationSet>
+    <AssociationSet Name="FK__HOADON__MaNV__52593CB8" Association="Self.FK__HOADON__MaNV__52593CB8">
+      <End Role="NHANVIEN" EntitySet="NHANVIEN" />
+      <End Role="HOADON" EntitySet="HOADON" />
+    </AssociationSet>
+    <AssociationSet Name="FK__SANPHAM__MaNSX__4BAC3F29" Association="Self.FK__SANPHAM__MaNSX__4BAC3F29">
+      <End Role="NSX" EntitySet="NSX" />
+      <End Role="SANPHAM" EntitySet="SANPHAM" />
+    </AssociationSet>
+    <AssociationSet Name="FK__TK_ADMIN__MaNV__59FA5E80" Association="Self.FK__TK_ADMIN__MaNV__59FA5E80">
+      <End Role="NHANVIEN" EntitySet="NHANVIEN" />
+      <End Role="TK_ADMIN" EntitySet="TK_ADMIN" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

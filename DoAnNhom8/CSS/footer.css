@@ -1,0 +1,124 @@
+﻿#footer{
+    top: 20px;
+    padding: 10px 0px;
+    border: 1px solid #ccc;
+    margin: 0 auto;
+    background-color: white;
+}
+[class*="tit"]{
+    text-align: left;
+}
+.ft-list, .ft-list2, .ft-list3{
+    line-height: 30px;
+    list-style-type: none;
+}
+.fs-ftr1{
+    padding-left: 20px;
+}
+.fs-ftrtit{
+    font-size: 15px;
+}
+.ft-list2 .fs-ftrtit{
+    font-weight: 500;
+}
+.ft-list2 li a span {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 100%;
+    color: #444b52;
+}
+.ft-list2 li a {
+    font-size: 28px;
+    font-weight: 500;
+    color: #cb1c22;
+}
+.ft-list li a{
+    color: blue;
+    font-size: 16px;
+}
+.ft-item .cth1 {
+    max-width: 40px;
+}
+.ft-list li {
+    padding: 0 0 16px;
+    font-size: 14px;
+    color: #4a4a4a;
+    position: relative;
+}
+.clearfix{
+    zoom: 1;
+}
+.fs-list li a {
+    font-size: 20px;
+    font-weight: 500;
+    color: #cb1c22;
+}
+.ft-list3 .ft-tit {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    margin: 0px;
+    padding-bottom: 5px;
+    color: #444b52;
+}
+.ft-list3 .fs-frgbhg {
+    margin-top: 0;
+    list-style-type: none;
+    margin-bottom: 10px;
+}
+.fcare{
+    max-width: 120px;
+}
+.fstudio{
+    min-width: 200px;
+}
+.lc{
+    max-width: 158px;
+}
+.ft-list3 .fs-ftrtitlg {
+    padding-bottom: 8px;
+    font-size: 14px;
+    padding: 2px;
+}
+.ft-item .fstudio {
+    max-width: 148px;
+}
+.ft-item .thvn {
+    max-width: 56px;
+}   
+.ft-item .cth2 {
+    max-width: 132px;
+}
+.ft-wrap{
+    width: 195px;
+    height: 102px;
+    margin-left: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    -webkit-box-align: center;
+}
+
+.fs-footer .payment{
+    row-gap: 7.5px;
+    max-width: 195px;
+}
+.ft-item{
+    margin-right: 2px;
+    max-width: 46px;
+    max-height: 29px;
+}
+.ft-pay{
+    height: 100%;
+    width: 100%;
+}
+.ft-copyright {
+    text-align: center;
+    padding: 10px 2px;
+    width: 100%;
+}
+.ft-copyright p {
+    font-size: 14px;
+    line-height: 20px;
+    color: #444b52;
+    margin: 0 auto;
+}

@@ -1,0 +1,104 @@
+﻿@model IEnumerable<DoAnNhom8.Models.SANPHAM>
+@using DoAnNhom8.Models;
+@{
+    ViewBag.Title = "Danh sách sản phẩm";
+    Layout = "~/Areas/Admin/Views/Shared/Layout_Admin.cshtml";
+}
+
+<style>
+    /* CSS cho bảng */
+    .table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-bottom: 20px;
+    }
+
+        .table th,
+        .table td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+
+        .table th {
+            background-color: #f2f2f2;
+            font-weight: bold;
+        }
+
+    /* CSS cho ảnh sản phẩm */
+    .product-image {
+        max-width: 100px;
+        max-height: 100px;
+    }
+
+    /* CSS cho các liên kết hành động */
+    .action-links {
+        display: flex;
+        justify-content: space-between;
+    }
+
+        .action-links a {
+            padding: 5px 10px;
+            text-decoration: none;
+            border-radius: 4px;
+            margin-right: 5px;
+        }
+
+            .action-links a:hover {
+                background-color: #f2f2f2;
+            }
+</style>
+
+<h2>DANH SÁCH SẢN PHẨM</h2>
+
+<p>
+    @Html.ActionLink("Thêm sản phẩm mới", "ThemSanPham")
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                TÊN SẢN PHẨM
+            </th>
+            <th>
+                SỐ LƯỢNG TỒN
+            </th>
+            <th>
+                MÔ TẢ
+            </th>
+            <th>
+                ẢNH
+            </th>
+            <th>
+                GIÁ BÁN
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.TenSP)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.SoLuong)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ChiTiet)
+                </td>
+                <td>
+                    <img class="product-image" src="~/HinhAnhSP/SanPham/@item.Anh" alt="Image" />
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.GiaBan)
+                </td>
+                <td class="action-links">
+                    @Html.ActionLink("Chỉnh sửa", "SuaSanPham", new { @model = item.MaSP }, new { @class = "btn btn-info" }) |
+                    @Html.ActionLink("Xóa", "XoaSanPham", new { model = item.MaSP }, new { @class = "btn btn-danger" })
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

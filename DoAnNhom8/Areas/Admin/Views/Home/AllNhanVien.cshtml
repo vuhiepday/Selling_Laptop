@@ -1,0 +1,33 @@
+﻿@model List<NhanVienModel>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>All Employees</title>
+</head>
+<body>
+    <h1>List of Employees</h1>
+    <table border="1">
+        <tr>
+            <th>Employee ID</th>
+            <th>Name</th>
+            <th>Gender</th>
+            <th>Address</th>
+            <th>Phone</th>
+        </tr>
+        @foreach (var employee in Model)
+        {
+            <tr>
+                <td>@employee.MaNV</td>
+                <td>@employee.TenNV</td>
+                <td>@employee.GioiTinh</td>
+                <td>@employee.DiaChi</td>
+                <td>@employee.SDT</td>
+            </tr>
+        }
+    </table>
+    @if (ViewBag.ErrorMessage != null)
+    {
+        <p>@ViewBag.ErrorMessage</p>
+    }
+</body>
+</html>

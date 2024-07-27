@@ -1,0 +1,54 @@
+﻿@{
+    ViewBag.Title = "DangKi";
+    Layout = "~/Views/Shared/UserLayout.cshtml";
+}
+
+<div class="container-fluid" style="margin-top: 30px;">
+    <div class="row justify-content-center">
+        <div class="col-md-6 mx-auto">
+            <div class="shadow-sm border rounded-3">
+                <div class="card-header">
+                    <h3 class="text-center">Đăng Ký</h3>
+                </div>
+                <div class="p-4">
+                    @using (Html.BeginForm())
+                    {
+                        <div class="d-flex align-items-center mb-5">
+                            <label class="mb-0" style="width: 220px">Họ tên KH</label>
+                            @Html.TextBox("HotenKH", "", new { @class = "form-control" }) @ViewData["Loi1"]
+                        </div>
+                        <div class="d-flex align-items-center mb-5">
+                            <label class="mb-0" style="width: 220px">Tên đăng nhập</label>
+                            @Html.TextBox("TenDN", "", new { @class = "form-control" }) @ViewData["Loi2"]
+                        </div>
+                        <div class="d-flex align-items-center mb-5">
+                            <label class="mb-0" style="width: 220px">Mật khẩu</label>
+                            @Html.Password("Matkhau", "", new { @class = "form-control" }) @ViewData["Loi3"]
+                        </div>
+                        <div class="d-flex align-items-center mb-5">
+                            <label class="mb-0" style="width: 220px">Xác nhận mật khẩu</label>
+                            @Html.Password("ReMatkhau", "", new { @class = "form-control" }) @ViewData["Loi4"]
+                        </div>
+                        <div class="d-flex align-items-center mb-5">
+                            <label class="mb-0" style="width: 220px">Số điện thoại</label>
+                            @Html.TextBox("Dienthoai", "", new { @class = "form-control" }) @ViewData["Loi5"]
+                        </div>
+                        <div class="d-flex align-items-center mb-5">
+                            <label class="mb-0" style="width: 220px">Ngày sinh</label>
+                            <input type="date" class="form-control" name="Ngaysinh" /> @ViewData["Loi6"]
+                        </div>
+                        <div class="d-flex align-items-center mb-5">
+                            <label class="mb-0" style="width: 220px">Email</label>
+                            @Html.TextBox("Email", "", new { @class = "form-control" }) @ViewData["Loi7"]
+                        </div>
+                        <div class="d-flex align-items-center mb-5">
+                            <label class="mb-0" style="width: 220px">Địa chỉ</label>
+                            @Html.TextBox("DiaChi", "", new { @class = "form-control" }) @ViewData["Loi8"]
+                        </div>
+                        <input style="background: #e60000;" type="submit" value="Đăng Kí" class="btn text-white form-control" />    
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

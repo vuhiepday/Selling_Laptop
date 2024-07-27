@@ -1,0 +1,31 @@
+﻿@model IEnumerable<DoAnNhom8.Models.NHANVIEN>
+
+@{
+    ViewBag.Title = "List_NhanVien";
+    Layout = "~/Areas/Admin/Views/Shared/Layout_Admin.cshtml";
+}
+
+<h2>DANH SÁCH NHÂN VIÊN</h2>
+<div class="table-responsive">
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Tên Nhân Viên</th>
+                <th>Giới Tính</th>
+                <th>Địa Chỉ</th>
+                <th>Số Điện Thoại</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@item.TenNV</td>
+                    <td>@item.GioiTinh</td>
+                    <td>@item.DiaChi</td>
+                    <td>@item.SDT</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
